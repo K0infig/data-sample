@@ -96,5 +96,7 @@ sampleMean = statistics.mean(mean_list)
 print("mean: "+ str(sampleMean))
 print("standard deviation : "+str(std_dev))
 
-
+fig = ff.create_distplot([mean_list], ["student marks"], show_hist=False)
+fig.add_trace(go.Scatter(x=[mean, mean], y=[0, 0.20], mode="lines", name="MEAN"))
+fig.show()
 
